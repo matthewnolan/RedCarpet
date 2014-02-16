@@ -15,7 +15,7 @@
 * Helpful callbacks
 
 ### 1.Getting Started
-Load jQuery(1.7+) and include Owl Carousel plugin files
+Include RedCarpet and it's themes
 
 ```html
 <!-- Basic stylesheet -->
