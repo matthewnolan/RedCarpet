@@ -28,7 +28,7 @@ Include RedCarpet and it's themes
 <script src="redcarpet/redcarpet.js"></script>
 ```
 ### 2.Set up your HTML
-Simply use this strucute. Repeat the "item" divs for your content. In this demo I used [Mustache](http://mustache.github.io/).
+Simply use this strucute. Repeat the "item" divs for your content. In this demo I used [Handlebars](http://handlebarsjs.com/).
 ```html
 <div class="red-carousel">
 

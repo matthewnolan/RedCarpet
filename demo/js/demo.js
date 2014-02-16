@@ -62,6 +62,6 @@ var red = $("#red-demo").redCarpet({
 		red.trigger('red.expandClose');
 	},
 	beforeInit: function() {
-		$("#red-demo").html(DEMO1.template(DEMO1.context)); // Kick off mustache templating 
+		$("#red-demo").html(DEMO1.template(DEMO1.context)); // Kick off handlebars templating 
 	}
 });
