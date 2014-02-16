@@ -1,13 +1,8 @@
 html,body {
 	height:100%;
 }
-
 section,footer{
 	padding:1em 0;
-}
-#demo {
-	/*height: auto !important;*/
-	/*height: 100%;*/
 }
 .jumbotron {
 	text-align: center;
@@ -16,67 +11,7 @@ section,footer{
 footer {
 	font-size: .9em;
 	text-align: center;
-	background-color: #ccc;
-}
-
-
-
-
-
-
-.dim .item img {
-	opacity: 0.6;
-}
-.dim .item img.imgactive {
-	opacity: 1;
-}
-
-
-
-
-#red-demo .item{
-	float:left;
-	background: #000;
-	color: #FFF;
-	text-align: center;
-}
-.details {
-	position:absolute;
-	right:0;
-	background:#00ff00;
-}
-
-.game-details {
-	display:none;
-	position: absolute;
-	top:0;
-	right:0;
-}
-
-.item {
-	width:inherit;
-}
-
-
-
-.dim .item .imgbtn {
-    opacity: 0.6;
-}
-.dim .item .imgbtn.imgactive {
-    opacity: 1;
-    box-shadow: inset 0 0 1px 4px rgba(255,255,255,.5);
-}
-.imgbk{
-    width:inherit;
-    height:200px; 
-}
-
-#red-demo .item{
-    float:left;
-    background: #000;
-    text-align: center;
-    overflow:hidden;
-    width:inherit;
+	background-color: #ddd;
 }
 .red-wrapper-outer {
     box-shadow: 0px 1px 18px 1px #333;
@@ -89,66 +24,10 @@ footer {
     background: linear-gradient(to bottom,  #e9e5e5 0%,#d0cbcb 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e5e5', endColorstr='#d0cbcb',GradientType=0 ); /* IE6-9 */
 }
-.details {
-    position:absolute;
-    right:0;
-    background:#00ff00;
-}
-.imgbtn{
-	width:200px;
-    height:200px;
-    z-index: 9;
-    position: relative;
-    max-width: 100%;
-    background-size: cover;
-    -moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear;
-}
-.imgbtn:hover{
-    cursor: pointer;
-}
-.item-details {
-    display:none;
-    position: absolute;
-    top:0;
-    right:0;
+#red-demo .item{
+    float:left;
+    background: #000;
+    text-align: center;
+    overflow:hidden;
     width:inherit;
-    z-index: -1;
-    color:#1c2d44;
-    /*overflow: hidden;*/
 }
-.item-details-inner {
-    position: absolute;
-    top:0;
-    right:0;
-    width:200%;
-    /*background:#00ff00;*/
-    z-index: 8;
-    padding:2em 0 0 0;
-    font-size: 15px;
-    line-height: 1.4em;
-}
-.item-details p {
-    padding:0 3em;
-    text-align: left;
-}
-.features-title {
-    display: inline-block;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.closebtn {
-    position:absolute;
-    right:5px;
-    top:5px;
-}
-
-.red-carousel .red-wrapper, .red-carousel .red-item {
-    overflow: hidden;
-}
-
-
-

@@ -12,7 +12,7 @@
 	<link href="../src/redcarpet.css" rel="stylesheet">
 	<link href="../src/redcarpet.theme.css" rel="stylesheet">
 
-	<link href="../lib/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<link href="js/lib/google-code-prettify/prettify.css" rel="stylesheet">
 
 </head>
 <body>
@@ -63,10 +63,16 @@
 &lt;/div&gt;</pre>    
 						<h2>2. Call the plugin</h2>
 						<p>Now call the redCarpet initializer function and your carousel is ready.</p>
-						
+
 <pre class="pre-show prettyprint linenums">
 $(document).ready(function() {
-  $("#red-demo").redCarousel();
+  $("#red-demo").redCarousel({
+    responsive: true,
+    expand: true,
+    expandWidth: 2, // number of slides to expand
+    expandElement: ".imgbtn", // What element acts as a button to expand
+    expandClose: ".closebtn", //an element to close the expand
+  });
 });</pre>  
 				</div>
 			</div>
@@ -78,7 +84,7 @@ $(document).ready(function() {
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="span12 ">
+				<div class="span12">
 					<p><a href="http://www.buildbuildbuild.net" target="blank">Matthew Nolan</a> 2014</p>
 					<a href="http://owlgraphic.com/owlcarousel/" target="_blank">Based on the fantasic Owl Carousel</a>
 				</div>
@@ -88,23 +94,22 @@ $(document).ready(function() {
 
 
 	<script id="entry-template" type="text/x-handlebars-template">
-	{{#each items}}
-
-	<div class="item">
-		<div class="imgbk" style="background:#000">
-			<div style="background-image:url({{img}});" class="imgbtn" data-tmpl="piece{{@index}}" id="img{{@index}}"></div>
-		</div>
-		<div class="item-details" id="piece{{@index}}">
-			<div class="item-details-inner">
-				<button type="button" class="close closebtn" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<p class="item-description">
-					<h2>{{@index}}</h2>
-					<span class="features-title">Description:</span> {{desc}}
-				</p>
+		{{#each items}}
+		<div class="item">
+			<div class="imgbk" style="background:#000">
+				<div style="background-image:url({{img}});" class="imgbtn" data-tmpl="piece{{@index}}" id="img{{@index}}"></div>
+			</div>
+			<div class="item-details" id="piece{{@index}}">
+				<div class="item-details-inner">
+					<button type="button" class="close closebtn" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<p class="item-description">
+						<h2>{{@index}}</h2>
+						<span class="features-title">Description:</span> {{desc}}
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	{{/each}}
+		{{/each}}
 
 	</script>
 
@@ -113,8 +118,8 @@ $(document).ready(function() {
 	<script src="../lib/js/bootstrap-collapse.js"></script>
 	<script src="../lib/js/bootstrap-transition.js"></script>
 	<script src="../lib/js/bootstrap-tab.js"></script>
-	<script src="../lib/js/google-code-prettify/prettify.js"></script>
-	<script src="js/handlebars-v1.3.0.js"></script>
+	<script src="js/lib/google-code-prettify/prettify.js"></script>
+	<script src="js/lib/handlebars-v1.3.0.js"></script>
 
 	<script src="../src/redcarpet.js"></script>
 	<script src="js/demo.js"></script>
