@@ -1,24 +1,18 @@
-var MYAPP = MYAPP || {};
+var DEMO1 = DEMO1 || {};
 
+$(document).ready(function() {
+	prettyPrint() //For formatting the code on the demo.
+});
+
+DEMO1.source = $("#entry-template").html();
+DEMO1.template = Handlebars.compile(DEMO1.source);
 
 Handlebars.registerHelper("math", function(index) {
 	if (index == 0) return "<div class=\"item\">";
 	else if (index % 2 == 0) return "<\/div><div class=\"item\">";
 });
 
-
-
-$(document).ready(function() {
-	prettyPrint()
-});
-
-
-
-
-
-MYAPP.source = $("#entry-template").html();
-MYAPP.template = Handlebars.compile(MYAPP.source);
-MYAPP.context = { items: [
+DEMO1.context = { items: [
 	{img: "http://placekitten.com/220/186", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
 	{img: "http://placekitten.com/220/185", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi architecto beatae vitae",},
 	{img: "http://placekitten.com/g/220/187", desc: "iste natus error sit",},
@@ -40,8 +34,6 @@ MYAPP.context = { items: [
 	{img: "http://placekitten.com/220/188", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
 	{img: "http://placekitten.com/220/189", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi",},
 ]};
-
-
 
 var red = $("#red-demo").redCarpet({
 	items: 6, //10 items above 1000px browser width
@@ -70,6 +62,6 @@ var red = $("#red-demo").redCarpet({
 		red.trigger('red.expandClose');
 	},
 	beforeInit: function() {
-		$("#red-demo").html(MYAPP.template(MYAPP.context));
+		$("#red-demo").html(DEMO1.template(DEMO1.context)); // Kick off mustache templating 
 	}
 });

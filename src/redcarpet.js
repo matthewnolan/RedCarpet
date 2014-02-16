@@ -1568,7 +1568,6 @@ if (typeof Object.create !== "function") {
 
 				$visibleContent = $openSlide.find(".item-details");
 				$visibleContent.hide().removeClass("open-detail");
-				console.log($visibleContent);
 
 				if ($parentOwl.data("red-last") > 0) { //for expanding 
 					base.goTo(base.currentItem - base.options.expandWidth, "rewind");
