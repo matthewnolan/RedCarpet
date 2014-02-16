@@ -17,14 +17,14 @@ if ( typeof Object.create !== "function" ) {
 }
 (function( $, window, document, undefined ) {
 
-	var Carousel = {
+	var Carpet = {
 		init :function(options, el){
 			var base = this;
 
 			base.$elem = $(el);
 
 			// options passed via js override options passed via data attributes
-			base.options = $.extend({}, $.fn.redCarousel.options, base.$elem.data(), options);
+			base.options = $.extend({}, $.fn.redCarpet.options, base.$elem.data(), options);
 
 			base.userOptions = options;
 			base.loadContent();
@@ -1559,19 +1559,19 @@ if ( typeof Object.create !== "function" ) {
 
 	};
 
-	$.fn.redCarousel = function( options ){
+	$.fn.redCarpet = function( options ){
 		return this.each(function() {
 			if($(this).data("red-init") === true){
 				return false;
 			}
 			$(this).data("red-init", true);
-			var carousel = Object.create( Carousel );
+			var carousel = Object.create( Carpet );
 			carousel.init( options, this );
-			$.data( this, "redCarousel", carousel );
+			$.data( this, "redCarpet", carousel );
 		});
 	};
 
-	$.fn.redCarousel.options = {
+	$.fn.redCarpet.options = {
 
 		items : 5,
 		itemsCustom : false,

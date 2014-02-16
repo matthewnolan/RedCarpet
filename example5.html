@@ -18,37 +18,23 @@
 
 
 </head>
-
 <body>
 
-
-
-
-
   <div id="demo">
-
-    <div id="red-demo" class="red-carousel">
-      <!-- <div id="content-placeholder"></div> -->
-
-    </div>
+    <div id="red-demo" class="red-carousel"></div>
   </div>
-
-  </div>
-
-  <!-- <div id="footer">footer</div> -->
-
 
 
   <script id="entry-template" type="text/x-handlebars-template">
   {{#each items}}
 
-  <div class="item"><div class="imgbk" style="background:#000"><h2>{{@index}}</h2>
-    <div style="background-image:url(http://placekitten.com/244/185);" class="imgbtn" data-tmpl="piece{{@index}}" id="img{{@index}}"></div>
+  <div class="item"><div class="imgbk" style="background:#000">
+    <div style="background-image:url({{img}});" class="imgbtn" data-tmpl="piece{{@index}}" id="img{{@index}}"></div>
   </div>
 
   <div class="item-details" id="piece{{@index}}">
     <div class="item-details-inner">
-        <button class="closebtn"></button>
+        <button type="button" class="close closebtn" data-dismiss="modal" aria-hidden="true">&times;</button>
         <p class="item-description">
           <h2>{{@index}}</h2>
           <span class="features-title">Description:</span>
@@ -57,10 +43,6 @@
       </div>
     </div>
   </div>
-
-
-
-
 
 {{/each}}
   </script>
@@ -80,29 +62,32 @@
   <script>
 
 var context = { items: [
-      {img: "http://placekitten.com/244/185", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
-      {img: "http://placekitten.com/244/185", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi architecto beatae vitae",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "doloremque laudantium",},
-      {img: "http://placekitten.com/244/185", desc: "omnis iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "doloremque laudantium",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
-      {img: "http://placekitten.com/244/185", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi architecto beatae vitae",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "doloremque laudantium",},
-      {img: "http://placekitten.com/244/185", desc: "omnis iste natus error sit",},
-      {img: "http://placekitten.com/244/185", desc: "doloremque laudantium",},
-      {img: "http://placekitten.com/244/185", desc: "iste natus error sit",}
+      {img: "http://placekitten.com/220/186", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
+      {img: "http://placekitten.com/220/185", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi architecto beatae vitae",},
+      {img: "http://placekitten.com/g/220/187", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/189", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/190", desc: "doloremque laudantium",},
+      {img: "http://placekitten.com/g/220/185", desc: "omnis iste natus error sit",},
+      {img: "http://placekitten.com/220/186", desc: "doloremque laudantium",},
+      {img: "http://placekitten.com/220/187", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/188", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
+      {img: "http://placekitten.com/220/189", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi",},      
+      {img: "http://placekitten.com/220/186", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
+      {img: "http://placekitten.com/220/185", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi architecto beatae vitae",},
+      {img: "http://placekitten.com/g/220/187", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/189", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/190", desc: "doloremque laudantium",},
+      {img: "http://placekitten.com/g/220/185", desc: "omnis iste natus error sit",},
+      {img: "http://placekitten.com/220/186", desc: "doloremque laudantium",},
+      {img: "http://placekitten.com/220/187", desc: "iste natus error sit",},
+      {img: "http://placekitten.com/220/188", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",},
+      {img: "http://placekitten.com/220/189", desc: "accusantium doloremque laudantium, totam rem  inventore veritatis et quasi",},
 ]};
 
 
   Handlebars.registerHelper("math", function(index) {
     if (index == 0) return "<div class=\"item\">";
     else if (index % 2 == 0) return "<\/div><div class=\"item\">";
-    // else if (index === context.items.length-1) return "<\/div>";
   });
 
 

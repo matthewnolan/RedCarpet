@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Red Carpet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="../lib/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<link href="../src/redcarpet.css" rel="stylesheet">
+	<link href="../src/redcarpet.theme.css" rel="stylesheet">
+
+	<link href="../lib/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<section id="intro">
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron center">
+					<h1>Red Carpet</h1>
+					<p class="lead">A jQuery plugin that lets you create touch enabled expanding carousels.</p>
+					<p><a class="btn btn-lg btn-success" href="https://github.com/matthewnolan/RedCarpet" role="button">Download</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="demo">
+		<div id="red-demo" class="red-carousel"></div>
+	</section>
+
+	<section id="details">
+		<div id="how-to">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<h1>How To Use</h1>
+						<h2>1. Set up your HTML</h2>
+						<p>Simply use this strucute. Repeat the "item" divs for your content. In this demo I used <a href="http://mustache.github.io/" target="_blank">Mustache</a>.</p>
+
+<pre class="pre-show prettyprint linenums">
+&lt;div class="red-carousel"&gt;
+
+  &lt;div class="item"&gt;
+    &lt;div class="imgbk"&gt;
+      &lt;div style="background-image:url(image.jpg)" id="img01"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="item-details" id="piece01"&gt;
+      &lt;div class="item-details-inner"&gt;
+        &lt;button type="button" class="closebtn"&gt;&times;&lt;/button&gt;
+        &lt;p class="item-description"&gt;
+          &lt;h2&gt;Cool Pic, huh?&lt;/h2&gt;
+          &lt;span class="features-title"&gt;Description:&lt;/span&gt; A photo of us on vacation.
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</pre>    
+						<h2>2. Call the plugin</h2>
+						<p>Now call the redCarpet initializer function and your carousel is ready.</p>
+						
+<pre class="pre-show prettyprint linenums">
+$(document).ready(function() {
+  $("#red-demo").redCarousel();
+});</pre>  
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span12 ">
+					<p><a href="http://www.buildbuildbuild.net" target="blank">Matthew Nolan</a> 2014</p>
+					<a href="http://owlgraphic.com/owlcarousel/" target="_blank">Based on the fantasic Owl Carousel</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script id="entry-template" type="text/x-handlebars-template">
+	{{#each items}}
+
+	<div class="item">
+		<div class="imgbk" style="background:#000">
+			<div style="background-image:url({{img}});" class="imgbtn" data-tmpl="piece{{@index}}" id="img{{@index}}"></div>
+		</div>
+		<div class="item-details" id="piece{{@index}}">
+			<div class="item-details-inner">
+				<button type="button" class="close closebtn" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<p class="item-description">
+					<h2>{{@index}}</h2>
+					<span class="features-title">Description:</span> {{desc}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+
+	</script>
+
+	<script src="../lib/js/jquery-1.9.1.min.js"></script>
+
+	<script src="../lib/js/bootstrap-collapse.js"></script>
+	<script src="../lib/js/bootstrap-transition.js"></script>
+	<script src="../lib/js/bootstrap-tab.js"></script>
+	<script src="../lib/js/google-code-prettify/prettify.js"></script>
+	<script src="js/handlebars-v1.3.0.js"></script>
+
+	<script src="../src/redcarpet.js"></script>
+	<script src="js/demo.js"></script>
+
+</body>
+
+</html>
